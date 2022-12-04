@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/*共通指定*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+*::after {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  color: #0066FF;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  display: block;
+}
+h1::after {
+  width: 150px;
+  content: "";
+  display: block;
+  border-bottom: solid 2px #0066FF;
+  margin: 0 auto;
+  padding: 5px 0 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  margin: 100px auto;
+  padding: 50px;
+}
+@media screen and (max-width: 767px) {
+  section {
+    padding: 10px;
+  }
+}
+
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/*個別指定*/
+body header {
+  height: 635px;
+  background-image: url("/assets/img/head_info.png");
+  background-size: cover;
+}
+body header nav {
+  height: 80px;
+  background-color: rgba(227, 227, 227, 0.25);
+  padding: 20px 40px;
+  display: flex;
+}
+body header nav div {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+body header nav div ul {
+  display: flex;
+}
+body header nav div ul li {
+  list-style-type: none;
+  font-size: 18px;
+  margin-left: 30px;
+}
+body header nav div ul li a {
+  color: #fff;
+}
+body main .CompanySection dl {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px;
+  margin-top: 10px;
+}
+body main .CompanySection dl dt {
+  width: 20%;
+  color: #0066FF;
+  font-weight: bold;
+  border-bottom: solid 1px #EEEEEE;
+  padding: 20px;
+}
+body main .CompanySection dl dd {
+  width: 80%;
+  border-bottom: solid 1px #EEEEEE;
+  padding: 20px;
+}
+@media screen and (max-width: 767px) {
+  body main .CompanySection dl {
+    display: block;
+  }
+  body main .CompanySection dl dt {
+    width: 100%;
+  }
+  body main .CompanySection dl dd {
+    border: none;
+  }
+}
+body main .HistorySection {
+  height: 100%;
+  background-image: url("/assets/img/history.png");
+  background-size: cover;
+}
+body main .HistorySection .HistoryList {
+  background-color: rgba(227, 227, 227, 0.35);
+  padding: 30px 30px 30px 70px;
+}
+body main .HistorySection .HistoryList ul {
+  list-style: none;
+  display: flex;
+  margin: 0 0 -10px 0;
+}
+body main .HistorySection .HistoryList ul li {
+  margin: 0 0 20px 0;
+}
+body main .HistorySection .HistoryList ul li:first-child {
+  color: #0066FF;
+}
+body main .HistorySection .HistoryList ul li:not(.last):first-child::after {
+  content: "";
+  width: 1px;
+  height: 50px;
+  margin: -10px 0 -20px 7px;
+  background-color: #CDCDCD;
+}
+body main .HistorySection .HistoryList ul li:nth-child(2) {
+  margin-left: 50px;
+  font-weight: bold;
+}
+body main .HistorySection .HistoryList ul li:last-child {
+  padding-left: 35px;
+}
+@media screen and (max-width: 767px) {
+  body main .HistorySection {
+    display: block;
+  }
+  body main .HistorySection .HistoryList {
+    margin: 0 auto;
+    padding: 0;
+  }
+  body main .HistorySection .HistoryList ul {
+    padding: 5px;
+  }
+  body main .HistorySection .HistoryList ul li:first-child,
+body main .HistorySection .HistoryList ul li:first-child::after {
+    display: none;
+  }
+  body main .HistorySection .HistoryList ul li:nth-child(2) {
+    margin-left: 0;
+  }
+}
+body main .CsrSection ul li {
+  list-style: square;
+}
+body main .CsrSection ul li:first-child {
+  list-style: none;
+}
+body footer {
+  background-color: #000;
+  color: #222222;
+}
+body footer .FooterContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+body footer .FooterContainer .FooterNav {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+body footer .FooterContainer .FooterNav div {
+  min-width: 240px;
+}
+body footer .FooterContainer .FooterNav div p {
+  color: #fff;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+}
+body footer .FooterContainer .FooterNav ul li {
+  list-style: none;
+  padding: 5px 0;
+}
+body footer .FooterContainer .FooterNav ul li a {
+  color: #fff;
+}
+body footer .FooterContainer .FooterWrapper {
+  display: flex;
+}
+body footer .FooterContainer .FooterWrapper .Privacy {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+body footer .FooterContainer .FooterWrapper .Privacy input {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+body footer .FooterContainer .FooterWrapper .Privacy p {
+  font-size: 14px;
+}
+body footer .FooterContainer .copyright {
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  body footer .FooterContainer {
+    display: block;
+  }
+  body footer .FooterContainer .FooterContainer .FooterNav {
+    display: none;
+  }
+  body footer .FooterContainer .FooterContainer .FooterNav div {
+    min-width: none;
+  }
+}/*# sourceMappingURL=style.css.map */
